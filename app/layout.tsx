@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "",
+  title: "Time Since",
   description: "",
-  keywords: "",
+  keywords: "Time Since, countdown, date, time",
   openGraph: {
-    title: "",
+    title: "Time Since",
     description: "",
     url: "",
-    siteName: "",
+    siteName: "Time Since",
     images: [
       {
         url: "",
@@ -27,6 +28,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <Script
+          src="https://unpkg.com/@tailwindcss/browser@4"
+          strategy="beforeInteractive"
+        />
+      </head>
       <body>{children}</body>
     </html>
   );
